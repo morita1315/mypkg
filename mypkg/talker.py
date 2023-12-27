@@ -1,16 +1,20 @@
+#SPDX-FileCopyrightText: 2023 Atsuya Morita
+#SPDX-License-Indentifier: BSD-3-Clause
+
 import rclpy
 from rclpy.node import Node
-from person_msgs.srv import Query 
+from std_msgs.msg import Int16
 
-def cb(request, response):
-    if request.name == "森田敦也":
-        response.age = 20
-    else:
-        response.age = 255
-
-    return response
- 
 rclpy.init()
 node = Node("talker")
-srv = node.create_service(Query, "query", cb)
-rclpy.spin(node)
+pub = node.create_publisher(Int16, "countup", 10) 
+n = 0
+
+ def cb():
+     global n
+     msg = Int16()
+     msg.data = n
+     pub.publish(msg)
+     n += 1
+node.create_timer(0.5, cb)
+rclpy.spin(node) 
