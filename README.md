@@ -110,7 +110,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 
 ## テスト環境
 * Ubuntu22.04.2LTS
-   *ROS2
+   * ROS2
 
 ## 著作権、ライセンス  
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます
