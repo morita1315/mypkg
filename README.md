@@ -40,7 +40,7 @@ $source ~/.bashrc
 $ros2 run mypkg talker
 ```
 
-別端末でros2を使ってサブスクライブする
+別端末でros2を使用しサブスクライブする
 ```bash
 $ ros2 topic echo /countup
 data: 126
@@ -67,7 +67,7 @@ data: 133
 $ros2 run mypkg talker
 ```
 
-別端末でros2を使って
+別端末でros2を使用し
 ```bash
 $ ros2 run mypkg listener
 [INFO] [1703695526.602248244] [listener]: Listen: 57
