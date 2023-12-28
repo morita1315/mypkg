@@ -2,6 +2,12 @@
 
 [![test](https://github.com/morita1315/robosys-ros2/actions/workflows/test.yml/badge.svg)](https://github.com/morita1315/robosys-ros2/actions/workflows/test.yml)
 
+ROS2で動くパッケージです
+
+## レポジトリの説明
+
+talkerが0.5秒おきに足された結果をcountupというトピックとして送信しlistenerがcountupというトピックを受け取り受信したデータをログに表示する
+
 ## 機能
 * talker
 
@@ -21,6 +27,61 @@
 
 ## 使用方法
 以下のように使用する
+
+~/ros2_wsで
+```bash
+$colcon build
+$source ~/.bashrc
+```
+
+* talker
+
+```bash
+$ros2 run mypkg talker
+```
+
+別端末でros2を使ってサブスクライブする
+```bash
+$ ros2 topic echo /countup
+data: 126
+---
+data: 127
+---
+data: 128
+---
+data: 129
+---
+data: 130
+---
+data: 131
+---
+data: 132
+---
+data: 133
+---
+```
+
+* listener
+
+```bash
+$ros2 run mypkg talker
+```
+
+別端末でros2を使って
+```bash
+$ ros2 run mypkg listener
+[INFO] [1703695526.602248244] [listener]: Listen: 57
+[INFO] [1703695527.082681603] [listener]: Listen: 58
+[INFO] [1703695527.582128404] [listener]: Listen: 59
+[INFO] [1703695528.082385889] [listener]: Listen: 60
+[INFO] [1703695528.582362048] [listener]: Listen: 61
+[INFO] [1703695529.082470773] [listener]: Listen: 62
+[INFO] [1703695529.582465365] [listener]: Listen: 63
+[INFO] [1703695530.082641807] [listener]: Listen: 64
+[INFO] [1703695530.582202083] [listener]: Listen: 65
+[INFO] [1703695531.082325690] [listener]: Listen: 66
+[INFO] [1703695531.582330376] [listener]: Listen: 67
+```
 
 ```bash
 $ ros2 launch mypkg talk_listen.launch.py
@@ -42,11 +103,12 @@ $ ros2 launch mypkg talk_listen.launch.py
 ```
 
 ## 必要なソフトウェア
-* python　
-  * テスト済み: 3.7~3.10
+* Python　
+  * テスト済み: 3.10
 
 ## テスト環境
 * Ubuntu22.04.2LTS
+   *ROS2
 
 ## 著作権、ライセンス  
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます
