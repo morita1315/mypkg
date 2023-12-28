@@ -4,10 +4,14 @@ on: push #push時に発動
 jobs:
   test:
     runs-on: ubuntu-22.04
-    container: ryuichiueda/ubuntu22.04-ros2:latest #上田教授のコンテナを使用する
+    container: ryuichiueda/ubuntu22.04-ros2:latest
     steps:
       - uses: actions/checkout@v2
-      - name: build and test
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10
+      - name: Build and test
         run: |
           rsync -av ./ /root/ros2_ws/src/mypkg/
           cd /root/ros2_ws
