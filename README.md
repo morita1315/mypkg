@@ -83,6 +83,8 @@ $ ros2 run mypkg listener
 [INFO] [1703695531.582330376] [listener]: Listen: 67
 ```
 
+* launch
+
 ```bash
 $ ros2 launch mypkg talk_listen.launch.py
 [INFO] [launch]: All log files can be found below /home/mossan/.ros/log/2023-12-27-23-46-34-961548-mossan-7710
