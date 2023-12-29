@@ -1,4 +1,6 @@
 #!/bin/bash
+#SPDX-FileCopyrightText: 2023 Atsuya Morita
+#SPDX-License-Indentifier: BSD-3-Clause
 
 dir=~
 
