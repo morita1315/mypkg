@@ -16,7 +16,7 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='mossan',
+    maintainer='Atsuya Morita',
     maintainer_email='amazingpower1315@gmail.com',
     description='a package for practice',
     license='BSD-3-Clause',
