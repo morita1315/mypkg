@@ -1,3 +1,6 @@
+#SPDX-FileCopyrightText: 2023 Atsuya Morita
+#SPDX-License-Indentifier: BSD-3-Clause
+
 from setuptools import find_packages, setup
 import os
 from glob import glob
