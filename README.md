@@ -8,17 +8,11 @@ ROS2で動くパッケージです
 
 talkerが0.5秒おきに足された結果をcountupというトピックとして送信しlistenerがcountupというトピックを受け取り受信したデータをログに表示する
 
-
-## インストール方法
-ROS2を使用できる環境でこのリポジトリをクローンする
-```bash
-$git clone git@github.com:morita1315/robosys-ros2.git
-```
 ## ノード
 
 * talker
 
-０．５秒おきに１ずつ足された結果をメッセージを生成し、countupというトピックに送信する
+0.5秒おきに1ずつ足された結果をメッセージを生成し、countupというトピックに送信する
 
 * listener
 
