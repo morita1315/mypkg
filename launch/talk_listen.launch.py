@@ -1,3 +1,6 @@
+#SPDX-FileCopyrightText: 2023 Atsuya Morita
+#SPDX-License-Indentifier: BSD-3-Clauseimport launch
+
 import launch
 import launch.actions
 import launch.substitutions
