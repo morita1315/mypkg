@@ -33,12 +33,6 @@ ROS2で動くパッケージです
 ## 使用方法
 以下のように使用する
 
-~/ros2_wsで
-```bash
-$colcon build
-$source ~/.bashrc
-```
-
 * talker
 
 ```bash
