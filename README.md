@@ -1,6 +1,6 @@
 # mypkg
 
-[![test](https://github.com/morita1315/robosys-ros2/actions/workflows/test.yml/badge.svg)](https://github.com/morita1315/robosys-ros2/actions/workflows/test.yml)
+[![test](https://github.com/morita1315/mypkg/actions/workflows/test.yml/badge.svg)](https://github.com/morita1315/mypkg/actions/workflows/test.yml)
 
 ROS2で動くパッケージです
 
